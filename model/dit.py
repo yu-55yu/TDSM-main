@@ -126,52 +126,68 @@ class CrossDiTBlock(nn.Module):
         return x, cond
         
 
+
+
+
 class MambaDiffusionBlock(nn.Module):
-    def __init__(self, dim, d_state=16, d_conv=4, expand=2):
+    def __init__(self, dim, num_heads=8, mlp_ratio=4.0, d_state=16, d_conv=4, expand=2):
         super().__init__()
-        # 1. Self-Modeling via Mamba (Bi-directional is better for offline action recognition)
-        self.norm1 = nn.LayerNorm(dim)
+        # DiT 的核心：用于注入 timestep 信息 (c) 的调制层
+        # 6 * dim 分别对应 mamba 和 ffn 的 shift, scale, gate
+        self.adaLN_modulation = nn.Sequential(
+            nn.SiLU(),
+            nn.Linear(dim, 6 * dim, bias=True)
+        )
+
+        # 1. 骨骼时序建模层：用 Mamba 替代原版的 Self-Attention
+        self.norm1 = nn.LayerNorm(dim, elementwise_affine=False, eps=1e-6)
         self.mamba = Mamba(
-            d_model=dim, # Model dimension d_model
-            d_state=d_state,  # SSM state expansion factor
-            d_conv=d_conv,    # Local convolution width
-            expand=expand,    # Block expansion factor
+            d_model=dim, 
+            d_state=d_state,  
+            d_conv=d_conv,    
+            expand=expand,    
         )
-        
-        # 2. Cross-Modality Alignment via Cross-Attention (Text conditioning)
-        self.norm2 = nn.LayerNorm(dim)
-        self.cross_attn = nn.MultiheadAttention(embed_dim=dim, num_heads=8, batch_first=True)
-        
-        # 3. Feed Forward
-        self.norm3 = nn.LayerNorm(dim)
+
+        # 2. 文本交互层：保留 Cross-Attention 
+        self.norm2 = nn.LayerNorm(dim, elementwise_affine=False, eps=1e-6)
+        self.cross_attn = nn.MultiheadAttention(embed_dim=dim, num_heads=num_heads, batch_first=True)
+
+        # 3. 前馈网络层
+        self.norm3 = nn.LayerNorm(dim, elementwise_affine=False, eps=1e-6)
         self.ffn = nn.Sequential(
-            nn.Linear(dim, dim * 4),
+            nn.Linear(dim, int(dim * mlp_ratio)),
             nn.GELU(),
-            nn.Linear(dim * 4, dim)
+            nn.Linear(int(dim * mlp_ratio), dim)
         )
 
-    def forward(self, x, text_emb):
-        # x: [Batch, Seq_Len, Dim] (Skeleton Latent)
-        # text_emb: [Batch, Text_Len, Dim] (Text Latent)
-        
-        # --- Mamba Branch (Replaces Self-Attention) ---
-        # Mamba requires specific shapes, usually strictly sequential
-        res = x
-        x = self.norm1(x)
-        x = self.mamba(x) 
-        x = x + res
-        
-        # --- Cross-Attention Branch (Conditioning) ---
-        res = x
-        x = self.norm2(x)
-        # Query = Skeleton, Key/Value = Text
-        x_attn, _ = self.cross_attn(x, text_emb, text_emb)
-        x = x + res + x_attn
-        
-        # --- FFN ---
-        x = x + self.ffn(self.norm3(x))
-        return x
+    def forward(self, x, text_emb, c):
+        """
+        x: [B, L, D] 骨骼序列
+        text_emb: [B, L_text, D] 文本嵌入
+        c: [B, D] 时间步嵌入 (timestep embedding)
+        """
+        # 计算 adaLN 的调制参数
+        # shift, scale 控制归一化分布；gate 控制残差连接的权重
+        shift_msa, scale_msa, gate_msa, shift_mlp, scale_mlp, gate_mlp = self.adaLN_modulation(c).chunk(6, dim=1)
 
+        # --- 第一步：Mamba 时序建模 (带时间调制) ---
+        res = x
+        x_norm = self.norm1(x) * (1 + scale_msa.unsqueeze(1)) + shift_msa.unsqueeze(1)
+        x = res + gate_msa.unsqueeze(1) * self.mamba(x_norm)
+
+        # --- 第二步：Cross-Attention 文本对齐 ---
+        res = x
+        # 注意：Cross-Attention 通常不需要像 Self-Attention 那样复杂的调制，直接做 norm 即可
+        x_attn, _ = self.cross_attn(self.norm2(x), text_emb, text_emb)
+        x = res + x_attn
+
+        # --- 第三步：FFN 层 (带时间调制) ---
+        res = x
+        x_norm = self.norm3(x) * (1 + scale_mlp.unsqueeze(1)) + shift_mlp.unsqueeze(1)
+        x = res + gate_mlp.unsqueeze(1) * self.ffn(x_norm)
+        
+        return x,text_emb
+        
 
 
 
@@ -202,12 +218,12 @@ class DiT(nn.Module):
         self.fl_embedder = nn.Linear(cond_size, hidden_size, bias=True)
         self.fl_pos_embed = nn.Parameter(torch.zeros(1, 35, hidden_size), requires_grad=True)  # M_l = 35
 
-        self.blocks = nn.ModuleList([MambaDiffusionBlock(hidden_size, num_heads, mlp_ratio=mlp_ratio) for _ in range(depth)])
+        self.blocks = nn.ModuleList([MambaDiffusionBlock(dim=hidden_size) for _ in range(depth)])
         self.final_layer = FinalLayer(hidden_size, in_channels)
         self.initialize_weights()
 
     def initialize_weights(self):
-        # Initialize transformer layers:
+        # 1. 基础线性层初始化
         def _basic_init(module):
             if isinstance(module, nn.Linear):
                 torch.nn.init.xavier_uniform_(module.weight)
@@ -215,21 +231,21 @@ class DiT(nn.Module):
                     nn.init.constant_(module.bias, 0)
         self.apply(_basic_init)
 
-        # Initialize positional embedding table:
+        # 2. 修正 Positional Embedding
         nn.init.normal_(self.fl_pos_embed, std=0.02)
 
-        # Initialize timestep embedding MLP:
+        # 3. 修正 Timestep Embedding MLP
         nn.init.normal_(self.t_embedder.mlp[0].weight, std=0.02)
         nn.init.normal_(self.t_embedder.mlp[2].weight, std=0.02)
 
-        # Zero-out AdaLN modulation layers in CrossDiT blocks:
+        # 4. 核心：对每一个 Block 的 adaLN 最后一层清零 (DiT 训练技巧)
         for block in self.blocks:
-            nn.init.constant_(block.adaLN_modulation[-1].weight, 0)
-            nn.init.constant_(block.adaLN_modulation[-1].bias, 0)
-            nn.init.constant_(block.adaLN_modulation_c[-1].weight, 0)
-            nn.init.constant_(block.adaLN_modulation_c[-1].bias, 0)
+            if hasattr(block, 'adaLN_modulation'):
+                # 最后一层 Linear 置零，保证训练初期残差路径起主导作用
+                nn.init.constant_(block.adaLN_modulation[-1].weight, 0)
+                nn.init.constant_(block.adaLN_modulation[-1].bias, 0)
 
-        # Zero-out output layers:
+        # 5. Final layer 零初始化
         nn.init.constant_(self.final_layer.adaLN_modulation[-1].weight, 0)
         nn.init.constant_(self.final_layer.adaLN_modulation[-1].bias, 0)
         nn.init.constant_(self.final_layer.linear.weight, 0)
