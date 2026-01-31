@@ -1,0 +1,119 @@
+Drink water | Legs support a stable standing posture | 0.2
+
+Eat meal | Legs support sitting or standing posture | 0.2
+
+Brushing teeth | Legs maintain balance while standing | 0.2
+
+Brushing hair | Legs remain stable during grooming | 0.2
+
+Drop | Legs maintain upright balance | 0.3
+
+Pickup | Legs bend slightly to lower the body | 0.3
+
+Throw | Legs stabilize and transfer force | 0.3
+
+Sitting down | Legs bend to lower the body | 0.6
+
+Standing up | Legs extend to lift the body | 0.6
+
+Clapping | Legs remain stable | 0.1
+
+Reading | Legs remain seated or standing | 0.2
+
+Writing | Legs support seated posture | 0.1
+
+Tear up paper | Legs remain stationary | 0.1
+
+Wear jacket | Legs support balance | 0.2
+
+Take off jacket | Legs support balance | 0.2
+
+Wear a shoe | One leg lifts slightly | 0.3
+
+Take off a shoe | One leg lifts slightly | 0.3
+
+Wear on glasses | Legs remain stationary | 0.1
+
+Take off glasses | Legs remain stationary | 0.1
+
+Put on a hat or cap | Legs support posture | 0.2
+
+Take off a hat or cap | Legs support posture | 0.2
+
+Cheer up | Legs may bounce or shift | 0.3
+
+Hand waving | Legs remain stable | 0.2
+
+Kicking something | One leg swings to strike | 0.7
+
+Reach into pocket | Legs support standing | 0.2
+
+Hopping | One leg repeatedly pushes off | 0.7
+
+Jump up | Both legs push off the ground | 0.7
+
+Make a phone call | Legs remain standing or walking slowly | 0.2
+
+Playing with phone or tablet | Legs remain seated or standing | 0.2
+
+Typing on a keyboard | Legs remain seated | 0.1
+
+Pointing to something | Legs remain stable | 0.2
+
+Taking a selfie | Legs support balance | 0.3
+
+Check time from watch | Legs remain stationary | 0.2
+
+Rub two hands together | Legs remain stationary | 0.2
+
+Nod head or bow | Legs remain stable | 0.3
+
+Shake head | Legs remain stable | 0.3
+
+Wipe face | Legs support posture | 0.2
+
+Saluting | Legs remain straight | 0.1
+
+Put palms together | Legs remain stable | 0.2
+
+Cross hands in front | Legs remain stable | 0.2
+
+Sneeze or cough | Legs support posture | 0.3
+
+Staggering | Legs move irregularly | 0.5
+
+Falling | Legs fail to support balance | 0.4
+
+Touch head | Legs remain stable | 0.2
+
+Touch chest | Legs remain stable | 0.2
+
+Touch back | Legs remain stable | 0.2
+
+Touch neck | Legs remain stable | 0.2
+
+Vomit | Legs support bent posture | 0.3
+
+Fan self | Legs remain stable | 0.2
+
+Punch or slap other person | Legs step or brace | 0.3
+
+Kicking other person | One leg swings forcefully | 0.7
+
+Pushing other person | Legs step forward to apply force | 0.3
+
+Pat on back of other person | Legs remain stable | 0.2
+
+Point finger at the other person | Legs remain stable | 0.2
+
+Hugging other person | Legs remain close and stable | 0.3
+
+Giving something to other person | Legs step slightly forward | 0.3
+
+Touch other person’s pocket | Legs remain close | 0.2
+
+Handshaking | Legs remain stable | 0.2
+
+Walking towards each other | Legs step forward | 0.7
+
+Walking apart from each other | Legs step away | 0.7

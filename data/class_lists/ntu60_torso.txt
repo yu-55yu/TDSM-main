@@ -1,0 +1,119 @@
+Drink water | Torso remains upright while drinking | 0.2
+
+Eat meal | Torso leans slightly toward food | 0.2
+
+Brushing teeth | Torso remains upright | 0.1
+
+Brushing hair | Torso remains upright | 0.1
+
+Drop | Torso remains upright | 0.1
+
+Pickup | Torso bends forward | 0.1
+
+Throw | Torso rotates to generate force | 0.1
+
+Sitting down | Torso lowers toward seat | 0.3
+
+Standing up | Torso rises upward | 0.3
+
+Clapping | Torso remains upright | 0.1
+
+Reading | Torso leans slightly forward | 0.4
+
+Writing | Torso leans forward | 0.1
+
+Tear up paper | Torso remains stable | 0.1
+
+Wear jacket | Torso rotates slightly | 0.2
+
+Take off jacket | Torso rotates slightly | 0.2
+
+Wear a shoe | Torso bends forward | 0.2
+
+Take off a shoe | Torso bends forward | 0.2
+
+Wear on glasses | Torso remains upright | 0.2
+
+Take off glasses | Torso remains upright | 0.2
+
+Put on a hat or cap | Torso remains upright | 0.2
+
+Take off a hat or cap | Torso remains upright | 0.2
+
+Cheer up | Torso expands expressively | 0.2
+
+Hand waving | Torso remains upright | 0.1
+
+Kicking something | Torso rotates for balance | 0.2
+
+Reach into pocket | Torso bends slightly | 0.1
+
+Hopping | Torso stabilizes vertical motion | 0.1
+
+Jump up | Torso lifts upward | 0.1
+
+Make a phone call | Torso tilts slightly | 0.1
+
+Playing with phone or tablet | Torso leans forward | 0.1
+
+Typing on a keyboard | Torso leans forward | 0.1
+
+Pointing to something | Torso orients toward target | 0.1
+
+Taking a selfie | Torso adjusts orientation | 0.1
+
+Check time from watch | Torso tilts downward | 0.2
+
+Rub two hands together | Torso remains upright | 0.0
+
+Nod head or bow | Torso bends forward | 0.65
+
+Shake head | Torso remains upright | 0.65
+
+Wipe face | Torso remains upright | 0.1
+
+Saluting | Torso remains straight | 0.1
+
+Put palms together | Torso remains upright | 0.1
+
+Cross hands in front | Torso remains upright | 0.2
+
+Sneeze or cough | Torso jerks forward | 0.5
+
+Staggering | Torso sways irregularly | 0.2
+
+Falling | Torso tilts sharply | 0.3
+
+Touch head | Torso remains upright | 0.1
+
+Touch chest | Torso remains upright | 0.1
+
+Touch back | Torso rotates slightly | 0.1
+
+Touch neck | Torso remains upright | 0.1
+
+Vomit | Torso bends forward forcefully | 0.5
+
+Fan self | Torso remains upright | 0.1
+
+Punch or slap other person | Torso rotates toward target | 0.1
+
+Kicking other person | Torso rotates toward target | 0.2
+
+Pushing other person | Torso leans forward | 0.1
+
+Pat on back of other person | Torso leans slightly | 0.2
+
+Point finger at the other person | Torso faces target | 0.1
+
+Hugging other person | Torso presses close | 0.1
+
+Giving something to other person | Torso leans forward | 0.1
+
+Touch other person’s pocket | Torso leans slightly | 0.1
+
+Handshaking | Torso faces other person | 0.1
+
+Walking towards each other | Torso moves forward | 0.2
+
+Walking apart from each other | Torso moves away | 0.2

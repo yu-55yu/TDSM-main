@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 训练结果 (核心)
+tdsm/results/
+work_dir/
+
+# 大型数据 (核心)
+data/sk_feats/
+*.npy
+
+# 编辑器
+.vscode/
+.DS_Store
+
+# 如果你有数据集压缩包
+*.zip
+*.tar.gz

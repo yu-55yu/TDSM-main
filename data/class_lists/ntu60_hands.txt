@@ -1,0 +1,119 @@
+Drink water | Hands hold a container and guide water to the mouth | 0.6
+
+Eat meal | Hands manipulate food or utensils toward the mouth | 0.6
+
+Brushing teeth | Hands move a toothbrush repeatedly near the mouth | 0.7
+
+Brushing hair | Hands perform repetitive brushing motions on hair | 0.7
+
+Drop | Hands release an object downward | 0.6
+
+Pickup | Hands grasp and lift an object | 0.6
+
+Throw | Arms swing forward to propel an object | 0.6
+
+Sitting down | Hands assist balance while lowering the body | 0.1
+
+Standing up | Hands push or stabilize during rising | 0.1
+
+Clapping | Hands strike each other repeatedly | 0.8
+
+Reading | Hands hold or adjust reading material | 0.4
+
+Writing | Hands guide a pen to form symbols | 0.8
+
+Tear up paper | Hands pull paper in opposite directions | 0.8
+
+Wear jacket | Arms guide sleeves during dressing | 0.6
+
+Take off jacket | Hands pull fabric away from the body | 0.6
+
+Wear a shoe | Hands guide the shoe onto the foot | 0.5
+
+Take off a shoe | Hands pull the shoe off the foot | 0.5
+
+Wear on glasses | Hands place glasses onto the face | 0.7
+
+Take off glasses | Hands remove glasses from the face | 0.7
+
+Put on a hat or cap | Hands place headwear onto the head | 0.6
+
+Take off a hat or cap | Hands lift headwear off the head | 0.6
+
+Cheer up | Arms raise or spread expressively | 0.5
+
+Hand waving | Hand swings side to side | 0.7
+
+Kicking something | Arms maintain balance during kicking | 0.1
+
+Reach into pocket | Hand moves into a pocket opening | 0.7
+
+Hopping | Arms swing to maintain balance | 0.2
+
+Jump up | Arms swing upward to assist lift | 0.2
+
+Make a phone call | Hand holds a phone to the ear | 0.7
+
+Playing with phone or tablet | Fingers tap or swipe on a device | 0.7
+
+Typing on a keyboard | Fingers press keys rapidly | 0.8
+
+Pointing to something | Arm extends with finger indicating | 0.7
+
+Taking a selfie | Arm extends holding a camera device | 0.6
+
+Check time from watch | Hand lifts toward the wrist | 0.6
+
+Rub two hands together | Hands rub against each other repeatedly | 0.8
+
+Nod head or bow | Arms remain neutral | 0.05
+
+Shake head | Arms remain neutral | 0.05
+
+Wipe face | Hand wipes across the face | 0.7
+
+Saluting | Hand raises to the forehead | 0.8
+
+Put palms together | Hands press together in front of the body | 0.7
+
+Cross hands in front | Arms cross over the torso | 0.6
+
+Sneeze or cough | Hands may cover the mouth | 0.2
+
+Staggering | Arms swing irregularly for balance | 0.3
+
+Falling | Arms extend outward instinctively | 0.3
+
+Touch head | Hand contacts the head | 0.7
+
+Touch chest | Hand contacts the chest | 0.7
+
+Touch back | Hand reaches to the back | 0.7
+
+Touch neck | Hand reaches to the neck | 0.7
+
+Vomit | Hand moves toward the mouth | 0.2
+
+Fan self | Hand waves to create airflow | 0.7
+
+Punch or slap other person | Arm swings to strike | 0.6
+
+Kicking other person | Arms stabilize during the kick | 0.1
+
+Pushing other person | Arms extend to apply force | 0.6
+
+Pat on back of other person | Hand taps another person’s back | 0.6
+
+Point finger at the other person | Finger extends toward another person | 0.7
+
+Hugging other person | Arms wrap around another person | 0.6
+
+Giving something to other person | Hand extends to pass an object | 0.6
+
+Touch other person’s pocket | Hand reaches toward another person | 0.7
+
+Handshaking | Hand grasps another hand | 0.7
+
+Walking towards each other | Arms swing naturally | 0.1
+
+Walking apart from each other | Arms swing naturally | 0.1
