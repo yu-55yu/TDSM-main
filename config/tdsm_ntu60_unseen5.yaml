@@ -34,8 +34,8 @@ eval_epoch: 10
 val_epoch: 50
 
 # training
-batch_size: 256  # duplicate
-test_batch_size: 512
+batch_size: 64
+test_batch_size: 128
 gpu: 0
 
 # zsl

@@ -1,0 +1,182 @@
+{
+  "1": {
+    "action": "Drink water",
+    "global": "The act of taking in water by mouth to hydrate or quench thirst.",
+    "parts": {
+      "hands": {"desc": "Holding a cup or bottle and bringing it to the mouth.", "weight": 0.6},
+      "legs": {"desc": "No significant movement of the legs.", "weight": 0.1},
+      "torso": {"desc": "Slight forward lean to bring the cup to the mouth.", "weight": 0.3}
+    }
+  },
+  "2": {
+    "action": "Eat meal/snack",
+    "global": "The action of consuming food for sustenance, nourishment, or pleasure.",
+    "parts": {
+      "hands": {"desc": "Holding food or utensils for eating.", "weight": 0.7},
+      "legs": {"desc": "Seated or standing, legs typically stationary.", "weight": 0.1},
+      "torso": {"desc": "Torso typically remains upright, slight head motion while eating.", "weight": 0.2}
+    }
+  },
+  "3": {
+    "action": "Brushing teeth",
+    "global": "The act of cleaning teeth and gums using a toothbrush and toothpaste for oral hygiene.",
+    "parts": {
+      "hands": {"desc": "Holding the toothbrush and moving it across the teeth.", "weight": 0.8},
+      "legs": {"desc": "Minimal leg movement, usually standing.", "weight": 0.05},
+      "torso": {"desc": "Head and torso might slightly tilt to ensure brushing angles.", "weight": 0.15}
+    }
+  },
+  "4": {
+    "action": "Brushing hair",
+    "global": "Using a brush or comb to groom and style hair.",
+    "parts": {
+      "hands": {"desc": "Holding the brush or comb, pulling through hair.", "weight": 0.7},
+      "legs": {"desc": "Minimal leg movement, typically seated or standing.", "weight": 0.1},
+      "torso": {"desc": "Head movement to guide the brush along the hair.", "weight": 0.2}
+    }
+  },
+  "5": {
+    "action": "Drop",
+    "global": "Releasing an object from one's grasp, allowing it to fall to the ground or another surface.",
+    "parts": {
+      "hands": {"desc": "Releasing the object from the hand.", "weight": 1.0},
+      "legs": {"desc": "No movement of legs.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, just a natural release of the object.", "weight": 0.0}
+    }
+  },
+  "6": {
+    "action": "Pickup",
+    "global": "Lifting or grasping an object with one's hands.",
+    "parts": {
+      "hands": {"desc": "Grasping the object and lifting it.", "weight": 0.9},
+      "legs": {"desc": "Legs bend to allow bending down to pick up the object.", "weight": 0.1},
+      "torso": {"desc": "Torso might bend slightly forward during the action.", "weight": 0.0}
+    }
+  },
+  "7": {
+    "action": "Throw",
+    "global": "Projecting an object through the air using the hand or arm.",
+    "parts": {
+      "hands": {"desc": "Holding the object and extending the arm to release it.", "weight": 0.8},
+      "legs": {"desc": "Legs may assist with the momentum for a stronger throw.", "weight": 0.2},
+      "torso": {"desc": "Torso rotation assists in the throw's force.", "weight": 0.0}
+    }
+  },
+  "8": {
+    "action": "Sitting down",
+    "global": "Moving from a standing position to a seated position.",
+    "parts": {
+      "hands": {"desc": "Hands may help balance while sitting.", "weight": 0.0},
+      "legs": {"desc": "Bending the legs to lower the body into a seated position.", "weight": 0.8},
+      "torso": {"desc": "Torso flexes forward slightly to facilitate the action.", "weight": 0.2}
+    }
+  },
+  "9": {
+    "action": "Standing up (from sitting position)",
+    "global": "Transitioning from a seated position to an upright position by pushing up with the legs.",
+    "parts": {
+      "hands": {"desc": "Hands may be placed on the knees or floor to assist in standing.", "weight": 0.2},
+      "legs": {"desc": "Legs push upward to lift the body into a standing position.", "weight": 0.8},
+      "torso": {"desc": "Torso rises as the legs straighten, potentially leaning forward to balance.", "weight": 0.0}
+    }
+  },
+  "10": {
+    "action": "Clapping",
+    "global": "Striking one's palms together to make a sound, typically as a form of applause or approval.",
+    "parts": {
+      "hands": {"desc": "Clapping hands together, rapidly bringing palms together and apart.", "weight": 1.0},
+      "legs": {"desc": "Legs remain stationary with no involvement in the clapping action.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, possibly a slight bend or rhythm for effect.", "weight": 0.0}
+    }
+  },
+  "11": {
+    "action": "Reading",
+    "global": "Interpreting and understanding written or printed words and symbols.",
+    "parts": {
+      "hands": {"desc": "Holding the book or reading material.", "weight": 0.2},
+      "legs": {"desc": "Minimal leg movement, usually seated.", "weight": 0.1},
+      "torso": {"desc": "Torso and head slightly bent forward to focus on the material.", "weight": 0.7}
+    }
+  },
+  "12": {
+    "action": "Writing",
+    "global": "Using a pen, pencil, or other writing tool to create letters, words, or symbols on a surface.",
+    "parts": {
+      "hands": {"desc": "Holding and moving the writing tool to create symbols on a surface.", "weight": 0.8},
+      "legs": {"desc": "Typically stationary, seated or standing.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright with occasional shifts for comfort.", "weight": 0.2}
+    }
+  },
+  "13": {
+    "action": "Tear up paper",
+    "global": "Ripping apart paper into smaller pieces with the hands.",
+    "parts": {
+      "hands": {"desc": "Gripping the paper and tearing it into pieces.", "weight": 1.0},
+      "legs": {"desc": "No significant movement from the legs.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright with minimal movement.", "weight": 0.0}
+    }
+  },
+  "14": {
+    "action": "Wear jacket",
+    "global": "The act of putting on a jacket to cover the upper body and arms.",
+    "parts": {
+      "hands": {"desc": "Reaching to pull the jacket's sleeves onto the arms.", "weight": 0.6},
+      "legs": {"desc": "Minimal leg movement, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Torso motion to slip the arms into the jacket and pull it over the shoulders.", "weight": 0.3}
+    }
+  },
+  "15": {
+    "action": "Take off jacket",
+    "global": "Removing a jacket from the body, typically by pulling it off the arms.",
+    "parts": {
+      "hands": {"desc": "Grabbing the jacket's edges to pull it off the body.", "weight": 0.7},
+      "legs": {"desc": "Legs remain stationary during the action.", "weight": 0.1},
+      "torso": {"desc": "Torso rotates or leans to assist in removing the jacket.", "weight": 0.2}
+    }
+  },
+  "16": {
+    "action": "Wear a shoe",
+    "global": "The act of putting a shoe onto one's foot for protection or fashion.",
+    "parts": {
+      "hands": {"desc": "Grabbing and positioning the shoe onto the foot.", "weight": 0.7},
+      "legs": {"desc": "Foot remains stationary while the other foot is lifted to place the shoe.", "weight": 0.3},
+      "torso": {"desc": "Minimal torso movement to assist in balancing the body during the action.", "weight": 0.0}
+    }
+  },
+  "17": {
+    "action": "Take off a shoe",
+    "global": "Removing a shoe from one's foot using one's hands.",
+    "parts": {
+      "hands": {"desc": "Using the hands to grip and remove the shoe from the foot.", "weight": 0.8},
+      "legs": {"desc": "Foot lifted to assist in removing the shoe.", "weight": 0.2},
+      "torso": {"desc": "No significant torso movement, only slight balancing to assist the removal.", "weight": 0.0}
+    }
+  },
+  "18": {
+    "action": "Wear on glasses",
+    "global": "Placing eyeglasses or spectacles on the face to correct vision or protect the eyes.",
+    "parts": {
+      "hands": {"desc": "Holding and positioning the glasses onto the face.", "weight": 0.8},
+      "legs": {"desc": "Legs remain stationary.", "weight": 0.1},
+      "torso": {"desc": "Head remains still while positioning glasses on the face.", "weight": 0.1}
+    }
+  },
+  "19": {
+    "action": "Take off glasses",
+    "global": "Removing eyeglasses from one's face with one's hands.",
+    "parts": {
+      "hands": {"desc": "Gripping and lifting the glasses off the face.", "weight": 0.9},
+      "legs": {"desc": "Minimal leg movement.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, only slight head tilt for better access.", "weight": 0.1}
+    }
+  },
+  "20": {
+    "action": "Put on a hat/cap",
+    "global": "Placing a hat or cap on the head for protection or fashion.",
+    "parts": {
+      "hands": {"desc": "Reaching and placing the hat/cap onto the head.", "weight": 0.8},
+      "legs": {"desc": "Legs remain stationary, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Minimal torso movement to adjust for placing the hat.", "weight": 0.1}
+    }
+  }
+}

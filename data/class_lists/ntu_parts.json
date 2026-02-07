@@ -1,0 +1,542 @@
+{
+  "1": {
+    "action": "Drink water",
+    "global": "The act of taking in water by mouth to hydrate or quench thirst.",
+    "parts": {
+      "hands": {"desc": "Holding a cup or bottle and bringing it to the mouth.", "weight": 0.6},
+      "legs": {"desc": "No significant movement of the legs.", "weight": 0.1},
+      "torso": {"desc": "Slight forward lean to bring the cup to the mouth.", "weight": 0.3}
+    }
+  },
+  "2": {
+    "action": "Eat meal/snack",
+    "global": "The action of consuming food for sustenance, nourishment, or pleasure.",
+    "parts": {
+      "hands": {"desc": "Holding food or utensils for eating.", "weight": 0.7},
+      "legs": {"desc": "Seated or standing, legs typically stationary.", "weight": 0.1},
+      "torso": {"desc": "Torso typically remains upright, slight head motion while eating.", "weight": 0.2}
+    }
+  },
+  "3": {
+    "action": "Brushing teeth",
+    "global": "The act of cleaning teeth and gums using a toothbrush and toothpaste for oral hygiene.",
+    "parts": {
+      "hands": {"desc": "Holding the toothbrush and moving it across the teeth.", "weight": 0.8},
+      "legs": {"desc": "Minimal leg movement, usually standing.", "weight": 0.05},
+      "torso": {"desc": "Head and torso might slightly tilt to ensure brushing angles.", "weight": 0.15}
+    }
+  },
+  "4": {
+    "action": "Brushing hair",
+    "global": "Using a brush or comb to groom and style hair.",
+    "parts": {
+      "hands": {"desc": "Holding the brush or comb, pulling through hair.", "weight": 0.7},
+      "legs": {"desc": "Minimal leg movement, typically seated or standing.", "weight": 0.1},
+      "torso": {"desc": "Head movement to guide the brush along the hair.", "weight": 0.2}
+    }
+  },
+  "5": {
+    "action": "Drop",
+    "global": "Releasing an object from one's grasp, allowing it to fall to the ground or another surface.",
+    "parts": {
+      "hands": {"desc": "Releasing the object from the hand.", "weight": 1.0},
+      "legs": {"desc": "No movement of legs.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, just a natural release of the object.", "weight": 0.0}
+    }
+  },
+  "6": {
+    "action": "Pickup",
+    "global": "Lifting or grasping an object with one's hands.",
+    "parts": {
+      "hands": {"desc": "Grasping the object and lifting it.", "weight": 0.9},
+      "legs": {"desc": "Legs bend to allow bending down to pick up the object.", "weight": 0.1},
+      "torso": {"desc": "Torso might bend slightly forward during the action.", "weight": 0.0}
+    }
+  },
+  "7": {
+    "action": "Throw",
+    "global": "Projecting an object through the air using the hand or arm.",
+    "parts": {
+      "hands": {"desc": "Holding the object and extending the arm to release it.", "weight": 0.8},
+      "legs": {"desc": "Legs may assist with the momentum for a stronger throw.", "weight": 0.2},
+      "torso": {"desc": "Torso rotation assists in the throw's force.", "weight": 0.0}
+    }
+  },
+  "8": {
+    "action": "Sitting down",
+    "global": "Moving from a standing position to a seated position.",
+    "parts": {
+      "hands": {"desc": "Hands may help balance while sitting.", "weight": 0.0},
+      "legs": {"desc": "Bending the legs to lower the body into a seated position.", "weight": 0.8},
+      "torso": {"desc": "Torso flexes forward slightly to facilitate the action.", "weight": 0.2}
+    }
+  },
+  "9": {
+    "action": "Standing up (from sitting position)",
+    "global": "Transitioning from a seated position to an upright position by pushing up with the legs.",
+    "parts": {
+      "hands": {"desc": "Hands may be placed on the knees or floor to assist in standing.", "weight": 0.2},
+      "legs": {"desc": "Legs push upward to lift the body into a standing position.", "weight": 0.8},
+      "torso": {"desc": "Torso rises as the legs straighten, potentially leaning forward to balance.", "weight": 0.0}
+    }
+  },
+  "10": {
+    "action": "Clapping",
+    "global": "Striking one's palms together to make a sound, typically as a form of applause or approval.",
+    "parts": {
+      "hands": {"desc": "Clapping hands together, rapidly bringing palms together and apart.", "weight": 1.0},
+      "legs": {"desc": "Legs remain stationary with no involvement in the clapping action.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, possibly a slight bend or rhythm for effect.", "weight": 0.0}
+    }
+  },
+  "11": {
+    "action": "Reading",
+    "global": "Interpreting and understanding written or printed words and symbols.",
+    "parts": {
+      "hands": {"desc": "Holding the book or reading material.", "weight": 0.2},
+      "legs": {"desc": "Minimal leg movement, usually seated.", "weight": 0.1},
+      "torso": {"desc": "Torso and head slightly bent forward to focus on the material.", "weight": 0.7}
+    }
+  },
+  "12": {
+    "action": "Writing",
+    "global": "Using a pen, pencil, or other writing tool to create letters, words, or symbols on a surface.",
+    "parts": {
+      "hands": {"desc": "Holding and moving the writing tool to create symbols on a surface.", "weight": 0.8},
+      "legs": {"desc": "Typically stationary, seated or standing.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright with occasional shifts for comfort.", "weight": 0.2}
+    }
+  },
+  "13": {
+    "action": "Tear up paper",
+    "global": "Ripping apart paper into smaller pieces with the hands.",
+    "parts": {
+      "hands": {"desc": "Gripping the paper and tearing it into pieces.", "weight": 1.0},
+      "legs": {"desc": "No significant movement from the legs.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright with minimal movement.", "weight": 0.0}
+    }
+  },
+  "14": {
+    "action": "Wear jacket",
+    "global": "The act of putting on a jacket to cover the upper body and arms.",
+    "parts": {
+      "hands": {"desc": "Reaching to pull the jacket's sleeves onto the arms.", "weight": 0.6},
+      "legs": {"desc": "Minimal leg movement, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Torso motion to slip the arms into the jacket and pull it over the shoulders.", "weight": 0.3}
+    }
+  },
+  "15": {
+    "action": "Take off jacket",
+    "global": "Removing a jacket from the body, typically by pulling it off the arms.",
+    "parts": {
+      "hands": {"desc": "Grabbing the jacket's edges to pull it off the body.", "weight": 0.7},
+      "legs": {"desc": "Legs remain stationary during the action.", "weight": 0.1},
+      "torso": {"desc": "Torso rotates or leans to assist in removing the jacket.", "weight": 0.2}
+    }
+  },
+  "16": {
+    "action": "Wear a shoe",
+    "global": "The act of putting a shoe onto one's foot for protection or fashion.",
+    "parts": {
+      "hands": {"desc": "Grabbing and positioning the shoe onto the foot.", "weight": 0.7},
+      "legs": {"desc": "Foot remains stationary while the other foot is lifted to place the shoe.", "weight": 0.3},
+      "torso": {"desc": "Minimal torso movement to assist in balancing the body during the action.", "weight": 0.0}
+    }
+  },
+  "17": {
+    "action": "Take off a shoe",
+    "global": "Removing a shoe from one's foot using one's hands.",
+    "parts": {
+      "hands": {"desc": "Using the hands to grip and remove the shoe from the foot.", "weight": 0.8},
+      "legs": {"desc": "Foot lifted to assist in removing the shoe.", "weight": 0.2},
+      "torso": {"desc": "No significant torso movement, only slight balancing to assist the removal.", "weight": 0.0}
+    }
+  },
+  "18": {
+    "action": "Wear on glasses",
+    "global": "Placing eyeglasses or spectacles on the face to correct vision or protect the eyes.",
+    "parts": {
+      "hands": {"desc": "Holding and positioning the glasses onto the face.", "weight": 0.8},
+      "legs": {"desc": "Legs remain stationary.", "weight": 0.1},
+      "torso": {"desc": "Head remains still while positioning glasses on the face.", "weight": 0.1}
+    }
+  },
+  "19": {
+    "action": "Take off glasses",
+    "global": "Removing eyeglasses from one's face with one's hands.",
+    "parts": {
+      "hands": {"desc": "Gripping and lifting the glasses off the face.", "weight": 0.9},
+      "legs": {"desc": "Minimal leg movement.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, only slight head tilt for better access.", "weight": 0.1}
+    }
+  },
+  "20": {
+    "action": "Put on a hat/cap",
+    "global": "Placing a hat or cap on the head for protection or fashion.",
+    "parts": {
+      "hands": {"desc": "Reaching and placing the hat/cap onto the head.", "weight": 0.8},
+      "legs": {"desc": "Legs remain stationary, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Minimal torso movement to adjust for placing the hat.", "weight": 0.1}
+    }
+  },
+  "21": {
+    "action": "Take off a hat/cap",
+    "global": "Removing a hat or cap from the head.",
+    "parts": {
+      "hands": {"desc": "Grabbing the hat/cap and lifting it off the head.", "weight": 0.9},
+      "legs": {"desc": "No significant movement from the legs.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement, just tilting the head or lifting the hat.", "weight": 0.1}
+    }
+  },
+  "22": {
+    "action": "Cheer up",
+    "global": "Attempting to improve one's or someone else's mood, typically by positive actions or gestures.",
+    "parts": {
+      "hands": {"desc": "Clapping or giving a positive gesture to uplift the mood.", "weight": 0.4},
+      "legs": {"desc": "Legs may move to support a jump or dance to enhance the mood.", "weight": 0.2},
+      "torso": {"desc": "Torso may exhibit a change in posture, standing tall or jumping in excitement.", "weight": 0.4}
+    }
+  },
+  "23": {
+    "action": "Hand waving",
+    "global": "A gesture involving moving one's hand or hands to signal, greet, or draw attention.",
+    "parts": {
+      "hands": {"desc": "Moving the hand back and forth in a waving motion.", "weight": 0.9},
+      "legs": {"desc": "Minimal movement from legs, typically standing or seated.", "weight": 0.1},
+      "torso": {"desc": "No significant torso movement, but slight lean or posture shift may accompany the gesture.", "weight": 0.0}
+    }
+  },
+  "24": {
+    "action": "Kicking something",
+    "global": "Striking an object with the foot.",
+    "parts": {
+      "hands": {"desc": "No involvement of hands in the action.", "weight": 0.0},
+      "legs": {"desc": "Lifting the foot to strike an object with force.", "weight": 1.0},
+      "torso": {"desc": "Torso may twist slightly to assist with the kick’s power.", "weight": 0.0}
+    }
+  },
+  "25": {
+    "action": "Reach into pocket",
+    "global": "Extending one's hand into a pocket to retrieve an item or adjust the contents.",
+    "parts": {
+      "hands": {"desc": "Reaching into the pocket and grasping an item.", "weight": 0.8},
+      "legs": {"desc": "Legs remain stationary, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Torso leans slightly forward to reach into the pocket.", "weight": 0.1}
+    }
+  },
+  "26": {
+    "action": "Hopping (one foot jumping)",
+    "global": "Jumping repeatedly on one foot, typically as part of a physical activity or exercise.",
+    "parts": {
+      "hands": {"desc": "Hands may assist with balance or be held still.", "weight": 0.0},
+      "legs": {"desc": "The single foot is used for both jumping and landing while the other leg remains raised.", "weight": 1.0},
+      "torso": {"desc": "Torso may remain upright or shift slightly with each hop for balance.", "weight": 0.0}
+    }
+  },
+  "27": {
+    "action": "Jumping up",
+    "global": "Leaping upward from a standing position as part of physical training or for jumping activity.",
+    "parts": {
+      "hands": {"desc": "Hands may be lifted to aid in the upward motion or for aesthetic purpose.", "weight": 0.3},
+      "legs": {"desc": "Both legs push off the ground to propel the body upwards.", "weight": 0.7},
+      "torso": {"desc": "Torso remains mostly upright, with slight forward or upward motion for balance.", "weight": 0.0}
+    }
+  },
+  "28": {
+    "action": "Make a phone call/Answer phone",
+    "global": "Using a phone to initiate or receive a phone conversation.",
+    "parts": {
+      "hands": {"desc": "Holding the phone to the ear and mouth for communication.", "weight": 0.8},
+      "legs": {"desc": "Typically stationary while holding the phone.", "weight": 0.1},
+      "torso": {"desc": "Torso remains upright while positioning the phone to the ear and speaking.", "weight": 0.1}
+    }
+  },
+  "29": {
+    "action": "Playing with phone/tablet",
+    "global": "Manipulating a phone or tablet through various interactions such as tapping, swiping, or scrolling.",
+    "parts": {
+      "hands": {"desc": "Tapping, swiping, or scrolling with fingers on the device’s screen.", "weight": 0.9},
+      "legs": {"desc": "Legs may remain still, typically seated in one place.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright, possibly slightly forward to interact with the screen.", "weight": 0.1}
+    }
+  },
+  "30": {
+    "action": "Typing on a keyboard",
+    "global": "Pressing keys on a keyboard to input information or commands into a computer or other device.",
+    "parts": {
+      "hands": {"desc": "Using fingers to press keys on the keyboard.", "weight": 0.9},
+      "legs": {"desc": "Legs typically seated or stationary while typing.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright with minimal forward lean.", "weight": 0.1}
+    }
+  },
+  "31": {
+    "action": "Pointing to something with finger",
+    "global": "Extending the arm and using the finger to indicate or draw attention to an object or location.",
+    "parts": {
+      "hands": {"desc": "Pointing the finger in the direction of the target.", "weight": 0.9},
+      "legs": {"desc": "Legs may remain stationary, body may slightly turn towards the target.", "weight": 0.1},
+      "torso": {"desc": "Torso may rotate slightly to aid in the pointing gesture.", "weight": 0.0}
+    }
+  },
+  "32": {
+    "action": "Taking a selfie",
+    "global": "Using a camera to take a self-portrait photograph.",
+    "parts": {
+      "hands": {"desc": "Holding the camera or phone to capture the image.", "weight": 0.8},
+      "legs": {"desc": "Legs may remain still, typically standing or seated.", "weight": 0.1},
+      "torso": {"desc": "Torso and head may be adjusted to align with the camera for the selfie.", "weight": 0.1}
+    }
+  },
+  "33": {
+    "action": "Checking time (from watch)",
+    "global": "Looking at a wristwatch or other timekeeping device to determine the current time.",
+    "parts": {
+      "hands": {"desc": "Raising the hand to the wristwatch to check the time.", "weight": 0.8},
+      "legs": {"desc": "No significant movement of legs.", "weight": 0.0},
+      "torso": {"desc": "Torso may rotate slightly to adjust the wrist for better visibility.", "weight": 0.2}
+    }
+  },
+  "34": {
+    "action": "Rubbing two hands together",
+    "global": "Moving one's hands back and forth against each other, often for warmth.",
+    "parts": {
+      "hands": {"desc": "Rubbing the palms or fingers against each other to create friction.", "weight": 1.0},
+      "legs": {"desc": "Minimal leg movement.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright or stationary, with no significant movement.", "weight": 0.0}
+    }
+  },
+  "35": {
+    "action": "Nod headbow",
+    "global": "Lowering one's head briefly in a sign of respect, greeting, or acknowledgment.",
+    "parts": {
+      "hands": {"desc": "No significant movement of hands involved.", "weight": 0.0},
+      "legs": {"desc": "Legs remain still, minimal movement.", "weight": 0.0},
+      "torso": {"desc": "Slight forward or downward movement of the head and neck.", "weight": 1.0}
+    }
+  },
+  "36": {
+    "action": "Shake head",
+    "global": "Moving the head from side to side in a rapid or deliberate manner, often to indicate disagreement.",
+    "parts": {
+      "hands": {"desc": "No significant involvement of hands.", "weight": 0.0},
+      "legs": {"desc": "Legs remain stationary.", "weight": 0.0},
+      "torso": {"desc": "Head rotates side to side while torso remains relatively still.", "weight": 1.0}
+    }
+  },
+  "37": {
+    "action": "Wiping face",
+    "global": "Using a cloth or one's hands to remove dirt, sweat, or moisture from one's face.",
+    "parts": {
+      "hands": {"desc": "Rubbing or wiping the face with the hands or a cloth.", "weight": 0.9},
+      "legs": {"desc": "Minimal movement of the legs.", "weight": 0.0},
+      "torso": {"desc": "Head and torso may shift slightly to assist in wiping the face.", "weight": 0.1}
+    }
+  },
+  "38": {
+    "action": "Salute",
+    "global": "A gesture of respect or greeting, typically performed by raising one's hand to the forehead or brim of a hat.",
+    "parts": {
+      "hands": {"desc": "Raising the hand to the forehead or hat brim in a salute.", "weight": 1.0},
+      "legs": {"desc": "Legs remain still with no significant involvement.", "weight": 0.0},
+      "torso": {"desc": "Slight tilt or movement of the torso to support the hand's positioning.", "weight": 0.0}
+    }
+  },
+  "39": {
+    "action": "Putting the palms together",
+    "global": "Pressing one's hands together, often as a sign of respect, greeting, or prayer.",
+    "parts": {
+      "hands": {"desc": "Pressing the palms together firmly.", "weight": 1.0},
+      "legs": {"desc": "Legs typically stationary.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright or slightly forward while pressing the hands together.", "weight": 0.0}
+    }
+  },
+  "40": {
+    "action": "Crossing hands in front (saying stop)",
+    "global": "Crossing the arms in front of the body to indicate stopping or refusal.",
+    "parts": {
+      "hands": {"desc": "Crossing the arms, placing one hand over the other in front of the body.", "weight": 1.0},
+      "legs": {"desc": "Minimal leg movement during this action.", "weight": 0.0},
+      "torso": {"desc": "Torso may rotate slightly to facilitate the gesture, but remains mostly stationary.", "weight": 0.0}
+    }
+  },
+  "41": {
+    "action": "Sneeze/cough",
+    "global": "The involuntary or deliberate act of expelling air and sometimes mucus from the nose and mouth, typically due to illness or irritation.",
+    "parts": {
+      "hands": {"desc": "Covering the mouth or nose with hands to prevent the spread of germs.", "weight": 0.7},
+      "legs": {"desc": "Minimal movement, typically standing or seated.", "weight": 0.0},
+      "torso": {"desc": "Torso may lean forward during the sneeze or cough, aiding in the expulsion.", "weight": 0.3}
+    }
+  },
+  "42": {
+    "action": "Staggering",
+    "global": "The unsteady movement or swaying of the body, usually caused by intoxication, dizziness, or fatigue.",
+    "parts": {
+      "hands": {"desc": "Hands may be used for balance, gripping onto objects for support.", "weight": 0.4},
+      "legs": {"desc": "Unstable, shifting movement of the legs to maintain balance.", "weight": 0.6},
+      "torso": {"desc": "Torso sways or tilts to help stabilize the body during the stagger.", "weight": 0.2}
+    }
+  },
+  "43": {
+    "action": "Falling",
+    "global": "The sudden loss of balance resulting in a person dropping or collapsing to the ground or a lower surface.",
+    "parts": {
+      "hands": {"desc": "Hands may attempt to break the fall or shield the face and body.", "weight": 0.7},
+      "legs": {"desc": "Legs typically give way as part of the fall, with no control over movement.", "weight": 0.5},
+      "torso": {"desc": "Torso may bend or twist as the body loses balance and falls.", "weight": 0.3}
+    }
+  },
+  "44": {
+    "action": "Touching head (headache)",
+    "global": "Placing one's hands on the head to alleviate pain or discomfort in the head or neck area.",
+    "parts": {
+      "hands": {"desc": "Hands placed gently or pressing against the head or temples.", "weight": 0.8},
+      "legs": {"desc": "Minimal movement, usually seated or standing still.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright, possibly tilting the head slightly for relief.", "weight": 0.2}
+    }
+  },
+  "45": {
+    "action": "Touching chest (stomachache/heart pain)",
+    "global": "Placing a hand on the chest to alleviate discomfort or pain in the chest area.",
+    "parts": {
+      "hands": {"desc": "Placing a hand or both hands on the chest in response to discomfort.", "weight": 0.9},
+      "legs": {"desc": "Legs may remain still, typically standing or seated.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright, potentially leaning slightly for relief.", "weight": 0.1}
+    }
+  },
+  "46": {
+    "action": "Touching back (backache)",
+    "global": "Placing one's hands on the back to alleviate or investigate pain, discomfort, or tension.",
+    "parts": {
+      "hands": {"desc": "Hands placed on the lower or upper back to provide comfort.", "weight": 0.9},
+      "legs": {"desc": "Minimal leg movement, typically standing or seated.", "weight": 0.0},
+      "torso": {"desc": "Torso may twist or bend slightly to relieve tension in the back.", "weight": 0.1}
+    }
+  },
+  "47": {
+    "action": "Touching neck (neckache)",
+    "global": "Pressing or rubbing the neck with one's hands, often to relieve pain or discomfort in the neck area.",
+    "parts": {
+      "hands": {"desc": "Hands pressing or massaging the neck area for relief.", "weight": 0.9},
+      "legs": {"desc": "Legs remain still, with minimal involvement in the action.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright, with potential slight tilting or bending of the neck for comfort.", "weight": 0.1}
+    }
+  },
+  "48": {
+    "action": "Nausea or vomiting",
+    "global": "A condition characterized by the urge to vomit or the act of forcefully expelling stomach contents through the mouth.",
+    "parts": {
+      "hands": {"desc": "Hands may be placed on the mouth or stomach for control.", "weight": 0.6},
+      "legs": {"desc": "Legs may be bent or in an unstable position during nausea or vomiting.", "weight": 0.2},
+      "torso": {"desc": "Torso may lean forward in response to the urge or action of vomiting.", "weight": 0.2}
+    }
+  },
+  "49": {
+    "action": "Using a fan (with hand or paper) to feel warm",
+    "global": "Creating airflow with a handheld or paper fan to either cool down or create warmth.",
+    "parts": {
+      "hands": {"desc": "Holding and moving the fan back and forth.", "weight": 1.0},
+      "legs": {"desc": "Minimal movement of the legs, typically standing or seated.", "weight": 0.0},
+      "torso": {"desc": "Torso may lean slightly forward or backward to create airflow efficiently.", "weight": 0.0}
+    }
+  },
+  "50": {
+    "action": "Punching/Slapping other person",
+    "global": "Striking another person with one's fist or open hand, typically for physical harm or aggression.",
+    "parts": {
+      "hands": {"desc": "Fist or open hand strikes the other person with force.", "weight": 1.0},
+      "legs": {"desc": "Legs may assist with the power or stance for balance during the strike.", "weight": 0.2},
+      "torso": {"desc": "Torso rotates or shifts to add power to the punch or slap.", "weight": 0.3}
+    }
+  },
+  "51": {
+    "action": "Kicking other person",
+    "global": "Striking another person with one's foot, often for physical harm or aggression.",
+    "parts": {
+      "hands": {"desc": "Minimal involvement of hands in the action.", "weight": 0.0},
+      "legs": {"desc": "The foot is lifted and extended to strike the person.", "weight": 1.0},
+      "torso": {"desc": "Torso may rotate or lean to add strength to the kick.", "weight": 0.2}
+    }
+  },
+  "52": {
+    "action": "Pushing other person",
+    "global": "Applying force to another person with one's body, typically with the intent to move or manipulate them.",
+    "parts": {
+      "hands": {"desc": "Pushing the person with hands or palms.", "weight": 0.8},
+      "legs": {"desc": "Legs may assist in pushing by providing stability or force.", "weight": 0.3},
+      "torso": {"desc": "Torso leans forward or shifts to provide power to the push.", "weight": 0.5}
+    }
+  },
+  "53": {
+    "action": "Patting on back of other person",
+    "global": "Lightly striking or tapping another person's back with one's hand.",
+    "parts": {
+      "hands": {"desc": "Patting the back of the other person with a light, comforting motion.", "weight": 0.9},
+      "legs": {"desc": "No significant leg movement involved in this action.", "weight": 0.0},
+      "torso": {"desc": "Torso remains stationary with minimal involvement in the action.", "weight": 0.1}
+    }
+  },
+  "54": {
+    "action": "Pointing finger at the other person",
+    "global": "Extending one's finger towards another person, typically to indicate something or express disapproval.",
+    "parts": {
+      "hands": {"desc": "Pointing with the index finger towards the other person.", "weight": 1.0},
+      "legs": {"desc": "Legs typically remain stationary, often with body rotating slightly towards the other person.", "weight": 0.0},
+      "torso": {"desc": "Torso may rotate or shift to aim the point directly at the person.", "weight": 0.0}
+    }
+  },
+  "55": {
+    "action": "Hugging other person",
+    "global": "Embracing another person with one's arms, often as a gesture of affection or comfort.",
+    "parts": {
+      "hands": {"desc": "Wrapping arms around the other person for a hug.", "weight": 0.9},
+      "legs": {"desc": "Legs may shift position to accommodate the hug, typically standing.", "weight": 0.1},
+      "torso": {"desc": "Torso leans toward the other person to initiate the hug.", "weight": 0.8}
+    }
+  },
+  "56": {
+    "action": "Giving something to other person",
+    "global": "Transferring an object or item to another person, typically as a gift or exchange.",
+    "parts": {
+      "hands": {"desc": "Handing over the item to the other person.", "weight": 1.0},
+      "legs": {"desc": "Minimal involvement of legs, typically stationary.", "weight": 0.0},
+      "torso": {"desc": "Torso may lean slightly to hand over the object.", "weight": 0.0}
+    }
+  },
+  "57": {
+    "action": "Touching other person's pocket",
+    "global": "Coming into contact with or manipulating the pocket of another person's clothing.",
+    "parts": {
+      "hands": {"desc": "Touching or adjusting the pocket area of another person's clothing.", "weight": 1.0},
+      "legs": {"desc": "Legs remain stationary with no involvement in this action.", "weight": 0.0},
+      "torso": {"desc": "Minimal torso movement involved while reaching for the pocket.", "weight": 0.0}
+    }
+  },
+  "58": {
+    "action": "Handshaking",
+    "global": "Greeting another person by clasping and shaking their hand, typically as a gesture of respect or friendliness.",
+    "parts": {
+      "hands": {"desc": "Clasping and shaking the other person's hand.", "weight": 1.0},
+      "legs": {"desc": "Legs remain stationary or with slight shifts for balance.", "weight": 0.0},
+      "torso": {"desc": "Torso remains upright, sometimes leaning slightly forward in greeting.", "weight": 0.0}
+    }
+  },
+  "59": {
+    "action": "Walking towards each other",
+    "global": "Moving one's body towards another person while standing or walking.",
+    "parts": {
+      "hands": {"desc": "Hands may move naturally with walking, minimal involvement.", "weight": 0.0},
+      "legs": {"desc": "Walking towards the other person, with one leg stepping forward after the other.", "weight": 1.0},
+      "torso": {"desc": "Torso remains upright, with minimal leaning or turning during the walk.", "weight": 0.1}
+    }
+  },
+  "60": {
+    "action": "Walking apart from each other",
+    "global": "Moving away from another person while standing or walking.",
+    "parts": {
+      "hands": {"desc": "Hands move naturally while walking, no significant movement.", "weight": 0.0},
+      "legs": {"desc": "Legs take steps to create distance between the two people.", "weight": 1.0},
+      "torso": {"desc": "Torso remains upright with a slight shift or turn to walk away.", "weight": 0.1}
+    }
+  }
+}

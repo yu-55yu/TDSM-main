@@ -24,7 +24,7 @@ def get_parser():
     # processor
     parser.add_argument('--phase', default='train', help='must be train or test')
 
-    # visulize and debug
+    # visualize and debug
     parser.add_argument('--seed', type=int, default=1, help='random seed for pytorch')
     parser.add_argument('--log-iter', type=int, default=100, help='the interval for printing messages (#iteration)')
     parser.add_argument('--save-iter', type=int, default=1, help='the interval for storing models (#iteration)')
@@ -33,7 +33,7 @@ def get_parser():
     parser.add_argument('--val-epoch', type=int, default=5, help='the interval for evaluating models (#iteration)')
 
     # feeder
-    parser.add_argument('--feeder', default='feeders.feeder', help='data loader will be used')
+    parser.add_argument('--feeder', default='feeders.feeder.FeatureFeeder', help='data loader will be used')
     parser.add_argument('--num-worker', type=int, default=4, help='the number of worker for data loader')
     parser.add_argument('--train-feeder-args', action=YamlAction, default=dict(), help='the arguments of data loader for training')
     parser.add_argument('--val-feeder-args', action=YamlAction, default=dict(), help='the arguments of data loader for validation')
@@ -47,13 +47,13 @@ def get_parser():
     parser.add_argument('--gpu', type=int, default=0, help='the index of GPUs for training or testing')
     parser.add_argument('--optimizer', default='AdamW', help='type of optimizer')
     parser.add_argument('--lr-scheduler', default='cosine', help='type of learning rate scheduler')
-    parser.add_argument('--learning_rate', type=float, default=0.01, help='initial learning rate')
-    parser.add_argument('--weight-decay', type=float, default=0.0005, help='weight decay for optimizer')
-    parser.add_argument('--num-iter', type=int, default=1, help='the number of total iteration')
+    parser.add_argument('--learning_rate', type=float, default=0.0001, help='initial learning rate')
+    parser.add_argument('--weight-decay', type=float, default=0.01, help='weight decay for optimizer')
+    parser.add_argument('--num-iter', type=int, default=50000, help='the number of total iteration')
     parser.add_argument('--num-epoch', type=int, default=1, help='the number of total iteration')
-    parser.add_argument('--num-warmup', type=int, default=1, help='the number of warmup iteration')
-    parser.add_argument('--batch-size', type=int, default=16, help='training batch size')
-    parser.add_argument('--test-batch-size', type=int, default=1, help='test batch size')
+    parser.add_argument('--num-warmup', type=int, default=100, help='the number of warmup iteration')
+    parser.add_argument('--batch-size', type=int, default=256, help='training batch size')
+    parser.add_argument('--test-batch-size', type=int, default=512, help='test batch size')
     parser.add_argument('--mixed-precision', type=str, default=None, choices=['no', 'fp16', 'bf16'])
     parser.add_argument('--pretrained-model-name-or-path', type=str, default='stabilityai/stable-diffusion-2-1-base')
     parser.add_argument('--accelerator-path', type=str, default='stabilityai/stable-diffusion-2-1-base')
@@ -61,11 +61,16 @@ def get_parser():
     # zero-shot learning (zsl)
     parser.add_argument('--unseen_label', type=int, default=5, help='the number of unseen classes')
     parser.add_argument('--unseen_label_path', type=str, default='./data/label_splits/ntu60/ru5.npy', help='list of unseen classes')
-    parser.add_argument('--prediction-type', type=str, default='eplison', help='eplison or sample or v_prediction')
+    parser.add_argument('--prediction-type', type=str, default='epsilon', help='epsilon or sample or v_prediction')
     parser.add_argument('--d-weight', type=float, default=1.0, help='the weight of diffusion loss')
     parser.add_argument('--t-weight', type=float, default=1.0, help='the weight of triplet loss')
     parser.add_argument('--num-noise', type=int, default=3, help='the number of inference noise')
     parser.add_argument('--margin', type=float, default=1.0, help='the margin for triplet loss')
+
+    # --- 方案二：部件级解耦新增参数 (銜接 train.py) ---
+    parser.add_argument('--local-weight', type=float, default=0.5, help='weight for part-aware triplet loss')
+    parser.add_argument('--global-weight', type=float, default=0.5, help='weight for global triplet loss')
+    parser.add_argument('--parts-json-path', type=str, default='./data/class_lists/ntu_parts.json', help='path to LLM part descriptions and weights')
 
     # denoising model
     parser.add_argument('--in-channels', type=int, default=256)
